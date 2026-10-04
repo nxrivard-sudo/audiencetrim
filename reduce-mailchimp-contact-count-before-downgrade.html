@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lower your Mailchimp contact count before changing your pricing tier</title>
+<meta name="description" content="Mailchimp bills on your peak contact total, and a downgrade only starts next billing cycle. A sourced checklist for cutting billable contacts (unsubscribed, non-subscribed, duplicates) before you change tiers.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/reduce-mailchimp-contact-count-before-downgrade.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Lower your Mailchimp contact count before changing your pricing tier"><meta property="og:description" content="A sourced checklist for cutting billable Mailchimp contacts before you change tiers."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/reduce-mailchimp-contact-count-before-downgrade.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does archiving contacts lower my Mailchimp bill right away?", "acceptedAnswer": {"@type": "Answer", "text": "Not for the current period. Mailchimp bills on the peak contact total during the billing period, so archiving lowers what counts from the next period on."}}, {"@type": "Question", "name": "When does a Mailchimp downgrade take effect?", "acceptedAnswer": {"@type": "Answer", "text": "At the start of your next billing cycle. You keep your current plan for the rest of the cycle, and if conflicts remain after the downgrade, sending is paused until you fix them."}}, {"@type": "Question", "name": "Which Mailchimp contacts don't count toward my contact limit?", "acceptedAnswer": {"@type": "Answer", "text": "Archived, cleaned and deleted contacts. Subscribed, unsubscribed and non-subscribed contacts all count."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>Lower your Mailchimp contact count before changing your pricing tier</h1>
+<p>On Mailchimp's monthly plans, the number of contacts you choose puts you in a pricing tier, and your plan type plus that tier sets your monthly bill (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>). So the cheapest tier you can move to depends on how many <i>billable</i> contacts you have. Here's how to get that number down first.</p>
+
+<h2>Four rules worth knowing first</h2>
+<ol>
+<li><b>What counts.</b> Subscribed, unsubscribed and non-subscribed contacts count. Archived, cleaned and deleted contacts don't (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">source</a>). Billing is based on the total across all your audiences, so duplicates across audiences add up (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">Requirements and Best Practices for Audiences</a>).</li>
+<li><b>Peak, not current.</b> Your bill reflects the highest number of contacts stored in your account during the billing period, even if the total later drops (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>).</li>
+<li><b>Going over costs extra.</b> If your contact total goes above your contact limit, Mailchimp doesn't stop your service; it adds charges for add-on contact blocks. If the increase was temporary, Mailchimp's advice is to reduce your audience and keep the lower total for a full billing cycle (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">source</a>; <a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">source</a>).</li>
+<li><b>Downgrades start next cycle.</b> A mid-cycle downgrade keeps your current plan until the cycle ends and takes effect at the start of the next one. If your account still has conflicts then (for example too many contacts for the new tier), sending is paused until you fix them (<a href="https://mailchimp.com/help/change-or-pause-your-pricing-plan/" rel="noopener">Change or Pause Your Marketing Plan</a>).</li>
+</ol>
+
+<h2>The checklist</h2>
+<ol>
+<li><b>Back up.</b> Export every audience (Audience → Export audience). Archiving is reversible, deleting isn't.</li>
+<li><b>Measure.</b> Count billable contacts and how many you could archive: unsubscribed, non-subscribed, and the same email in more than one audience. You can do this by hand in a spreadsheet, or with <a href="./#audit">AudienceTrim's free audit</a>, which reads the exports in your browser without uploading them.</li>
+<li><b>Archive unsubscribed contacts</b> in each audience: <a href="mailchimp-archive-unsubscribed-contacts-bulk.html">step-by-step guide</a>.</li>
+<li><b>Decide on non-subscribed contacts.</b> Mailchimp suggests archiving them if you only use Mailchimp for bulk email, and keeping them if you use them for ads or transactional emails (<a href="https://mailchimp.com/help/about-non-subscribed-contacts/" rel="noopener">source</a>): <a href="mailchimp-non-subscribed-contacts-billing.html">more detail</a>.</li>
+<li><b>Remove cross-audience duplicates.</b> Mailchimp doesn't dedupe across audiences and treats the same email in two audiences as two people (<a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">About Duplicate Contacts</a>): <a href="mailchimp-duplicate-contacts-across-audiences.html">how to find them</a>.</li>
+<li><b>Consider inactive subscribers.</b> Mailchimp's own suggestion for avoiding extra charges is to segment contacts who aren't interacting with your emails or buying, and archive them (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">source</a>).</li>
+<li><b>Change the tier.</b> Profile icon → Account → Billing → Monthly plans or credits → Change Plan → choose the plan and contact limit → Downgrade → review the changes → tick the confirmation box → Downgrade (<a href="https://mailchimp.com/help/change-or-pause-your-pricing-plan/" rel="noopener">source</a>).</li>
+<li><b>Keep the total down</b> through the end of the cycle. Big imports or store syncs before the new cycle starts can push the peak back up.</li>
+</ol>
+
+<h2>Exceptions</h2>
+<ul>
+<li><b>Legacy plans</b> (paid accounts from before May 15, 2019): Mailchimp says it automatically adjusts your billing tier as your contact count grows or shrinks, so there's no tier to change by hand (<a href="https://mailchimp.com/help/change-pause-legacy-plan/" rel="noopener">Change or Pause Your Legacy Plan</a>). Lowering the count still matters.</li>
+<li><b>Free plan:</b> it includes up to 250 contacts (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">source</a>), and you can downgrade from a paid plan to Free only once over the life of your account (<a href="https://mailchimp.com/help/change-or-pause-your-pricing-plan/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Does archiving contacts lower my Mailchimp bill right away?</b> Not for the current period. Mailchimp bills on the peak contact total during the billing period, so archiving lowers what counts from the next period on.</p>
+<p><b>When does a Mailchimp downgrade take effect?</b> At the start of your next billing cycle. You keep your current plan for the rest of the cycle, and if conflicts remain after the downgrade, sending is paused until you fix them.</p>
+<p><b>Which Mailchimp contacts don't count toward my contact limit?</b> Archived, cleaned and deleted contacts. Subscribed, unsubscribed and non-subscribed contacts all count.</p>
+</div>
+
+<p><a class="btn" href="./#audit">Count my archivable contacts (free)</a></p>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-archive-unsubscribed-contacts-bulk.html">How to archive unsubscribed contacts in bulk</a></li>
+<li><a href="mailchimp-non-subscribed-contacts-billing.html">Do non-subscribed contacts count toward your Mailchimp bill?</a></li>
+<li><a href="mailchimp-unsubscribed-contacts-billing.html">Does Mailchimp charge for unsubscribed contacts?</a></li>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicate contacts across Mailchimp audiences</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Facts are from Mailchimp's help center, accessed October 2026; check your own Billing page, since plans differ. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div></body></html>

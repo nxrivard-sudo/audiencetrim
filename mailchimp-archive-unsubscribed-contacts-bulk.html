@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to archive unsubscribed contacts in Mailchimp in bulk (step by step)</title>
+<meta name="description" content="Unsubscribed contacts still count toward your Mailchimp contact total. Here's how to select every unsubscribed contact in an audience and archive them in one go, plus what archiving does and doesn't change.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-archive-unsubscribed-contacts-bulk.html">
+<meta property="og:type" content="article"><meta property="og:title" content="How to archive unsubscribed contacts in Mailchimp in bulk"><meta property="og:description" content="Select every unsubscribed contact in an audience and archive them in one go, with Mailchimp's own steps and caveats."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-archive-unsubscribed-contacts-bulk.html">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>How to archive unsubscribed contacts in Mailchimp in bulk</h1>
+<p><b>Why bother:</b> on current Mailchimp plans, subscribed, unsubscribed and non-subscribed contacts are all included in your contact count (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>). Archived contacts don't count toward your billing tier (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">Archive or Unarchive Your Contacts</a>). Unsubscribed contacts can't receive marketing emails anyway; they can only receive ads and transactional emails (<a href="https://mailchimp.com/help/about-your-contacts/" rel="noopener">About Your Contacts</a>).</p>
+
+<h2>Step 1: show only the unsubscribed contacts</h2>
+<ol>
+<li>Click <b>Audience</b>. If you have more than one audience, pick it from the Audience drop-down.</li>
+<li>Click the <b>Subscription status</b> drop-down, then click <b>Email unsubscribed</b>.</li>
+<li>Optional but recommended: click <b>Save as segment</b>, and export the segment to a CSV so you have a copy of who you archived.</li>
+</ol>
+<p class="note">Source: <a href="https://mailchimp.com/help/view-unsubscribed-contacts/" rel="noopener">View Unsubscribed Contacts</a>.</p>
+
+<h2>Step 2: select all and archive</h2>
+<ol>
+<li>In the segment view, check the box in the table header to select every contact in the segment.</li>
+<li>If Mailchimp asks, click <b>Select all [X] contacts</b> so the selection covers more than the visible page.</li>
+<li>Click <b>Actions</b>, then <b>Archive</b>.</li>
+<li>Type <b>ARCHIVE</b> in the pop-up and click Archive. Large lists can take a few minutes.</li>
+</ol>
+<p class="note">Source: <a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">Archive contacts within a segment</a>.</p>
+
+<h2>Step 3: repeat in every audience</h2>
+<p>Archiving works one audience at a time. Mailchimp notes that if a contact appears in more than one audience, you need to archive them from each audience (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">source</a>). The same person in two audiences is also billed as two people (<a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">About Duplicate Contacts</a>); see <a href="mailchimp-duplicate-contacts-across-audiences.html">duplicate contacts across audiences</a>.</p>
+
+<h2>What archiving changes, and what it doesn't</h2>
+<ul>
+<li><b>Data is kept.</b> Archived contacts move to a separate archived contacts table. Their data is preserved, including in email reports, and you can unarchive them at any time (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">source</a>).</li>
+<li><b>They can't receive anything</b> while archived: no marketing, and per Mailchimp's contact table, no ads or transactional emails either (<a href="https://mailchimp.com/help/about-your-contacts/" rel="noopener">About Your Contacts</a>). If you use unsubscribed contacts in ad audiences, decide that before archiving.</li>
+<li><b>They can come back on their own.</b> A contact unarchives themselves if they sign up through your Mailchimp signup form or interact with your connected online store (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">source</a>).</li>
+<li><b>This billing period's peak stays.</b> Mailchimp bills on the peak contact total during the billing period, so the bill reflects the highest number stored that month even if the total later drops (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>). Archiving lowers future periods, not one already reached.</li>
+<li><b>Not a GDPR deletion.</b> Mailchimp says archiving isn't a legal substitute for deletion; if an EU contact asks to be removed, delete them (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>Know the number before you start</h2>
+<p>AudienceTrim's free audit reads your Mailchimp audience exports <b>in your browser</b> (nothing is uploaded) and shows how many unsubscribed, non-subscribed and cross-audience duplicate contacts are in each audience, so you know how many billed contacts you can archive before you touch anything.</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-unsubscribed-contacts-billing.html">Does Mailchimp charge for unsubscribed contacts?</a></li>
+<li><a href="mailchimp-non-subscribed-contacts-billing.html">Do non-subscribed contacts count toward your Mailchimp bill?</a></li>
+<li><a href="reduce-mailchimp-contact-count-before-downgrade.html">Lower your contact count before changing your Mailchimp pricing tier</a></li>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicate contacts across Mailchimp audiences</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Steps and quotes are from Mailchimp's help center, accessed October 2026; Mailchimp may change its interface. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div></body></html>
