@@ -120,7 +120,7 @@
       if (url) { b.href = url; b.target = '_blank'; b.rel = 'noopener'; any = true; b.addEventListener('click', function () { if (window.LT_TRACK) window.LT_TRACK('buy-click-' + b.dataset.plan); }); }
       else { b.textContent = 'Checkout coming soon'; b.setAttribute('aria-disabled', 'true'); b.onclick = function (e) { e.preventDefault(); }; b.style.opacity = .5; }
     });
-    $('billedAs').textContent = any && C.operator ? 'Secure checkout by Stripe. Billed as ' + C.operator + '. Prices in USD.' : '';
+    $('billedAs').textContent = any && C.operator ? 'Secure checkout by Stripe. Sold by ' + C.operator + '. Billed as THE PICNIC COLLECTIVE on your card statement. Prices in USD.' : '';
     if (C.supportEmail) $('contact').innerHTML = 'Support: <a href="mailto:' + esc(C.supportEmail) + '">' + esc(C.supportEmail) + '</a>';
   }
   document.addEventListener('DOMContentLoaded', function () {
