@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AudienceTrim: thank you</title><link rel="stylesheet" href="style.css"><meta name="robots" content="noindex"></head>
+<body><header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a></div></header>
+<div class="wrap"><section><h2>Thanks for your purchase</h2>
+<div class="card"><p id="msg">Checking your key…</p><pre id="key"></pre><p class="note">Save this key somewhere safe. It's stored in this browser, so the tool unlocks automatically. On another device, paste it into the "Have a key?" box.</p>
+<p><a class="btn" href="./#audit">Open the tool</a></p></div>
+<p class="note">Problem? <span id="contact"></span></p></section></div>
+<script src="config.js"></script><script src="license.js"></script><script>
+(async function(){var k=((location.hash+'&'+location.search).match(/[#?&]k=([^&]+)/)||[])[1];k=k?decodeURIComponent(k):'';var m=document.getElementById('msg');
+var C=window.LT_CONFIG||{};if(C.supportEmail)document.getElementById('contact').innerHTML='Email <a href="mailto:'+C.supportEmail+'">'+C.supportEmail+'</a> with your Stripe receipt.';
+if(!k){m.textContent='No key found in this link. Email support with your Stripe receipt and we will send it.';return;}
+var r=await LTLicense.verifyKey(k);if(r.ok&&(C.revoked||[]).indexOf(r.payload.k)<0){try{localStorage.setItem('lt_key',k)}catch(e){}m.textContent='Your '+r.payload.p+' key is active'+(r.payload.e<'2090'?' until '+r.payload.e:'')+'.';document.getElementById('key').textContent=k;}
+else m.textContent='This key could not be verified ('+(r.why||'revoked')+'). Email support with your Stripe receipt.';})();
+</script></body></html>
