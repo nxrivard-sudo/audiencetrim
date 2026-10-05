@@ -1,1 +1,78 @@
-loading
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Merge Mailchimp audiences without paying twice for the same contacts</title>
+<meta name="description" content="Mailchimp bills the same email in two audiences as two contacts. How to combine audiences with the official tool or a CSV import so duplicates stop counting twice, without losing the backup you need.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/merge-mailchimp-audiences-without-double-billing.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Merge Mailchimp audiences without paying twice"><meta property="og:description" content="How to combine Mailchimp audiences so the same email stops counting twice toward your contact limit."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/merge-mailchimp-audiences-without-double-billing.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does Mailchimp charge twice for the same email in two audiences?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Mailchimp treats each audience separately, so the same email in two audiences counts as two contacts toward your limit."}}, {"@type": "Question", "name": "Will combining audiences lower my Mailchimp bill?", "acceptedAnswer": {"@type": "Answer", "text": "It can, if you currently have the same people in more than one audience. After they live in one primary audience, Mailchimp no longer counts them twice. Your bill still uses that month's peak, so the savings show from the lower peak onward."}}, {"@type": "Question", "name": "What data does the Combine Audiences tool lose?", "acceptedAnswer": {"@type": "Answer", "text": "Group and tag data, opens and clicks, member ratings, opt-in timestamps, signup sources, and GDPR permissions don't transfer. Only subscribed contacts are moved."}}, {"@type": "Question", "name": "Should I use the tool or a CSV import?", "acceptedAnswer": {"@type": "Answer", "text": "Use the tool for a quick subscribed-only merge. Use CSV export and import when you need unsubscribed, non-subscribed or cleaned contacts in the primary, or when you want tags that preserve which audience each contact came from."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>Merge Mailchimp audiences without paying twice for the same contacts</h1>
+<p><b>Short answer:</b> Mailchimp "treats each audience in your account separately, and billing is based on the total number of contacts across all your audiences (except with archived and cleaned contacts)." The same email in two audiences is billed as two people (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">Requirements and Best Practices for Audiences</a>; <a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">About Duplicate Contacts</a>). Combining into one primary audience stops that double-counting.</p>
+
+<h2>Why merging can lower your bill</h2>
+<p>Mailchimp's best practice is one primary audience, organized with tags, groups or segments. "If you have duplicate contacts across audiences, having 1 audience could save you money" (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">source</a>). Inside a single audience, Mailchimp automatically blocks duplicate email addresses on import; across audiences, it can't see them (<a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">About Duplicate Contacts</a>).</p>
+<p>Two official paths:</p>
+<ul>
+<li><b>Combine audiences tool</b> — built into Mailchimp. Moves <i>subscribed</i> contacts into a primary audience. Fast, but loses some data (details below).</li>
+<li><b>CSV export + import</b> — more control. You export every contact type, archive the old audience, then import into the primary with tags. Mailchimp says this "will also help you save money on your monthly plan by removing duplicate contacts" (<a href="https://mailchimp.com/help/combine-audiences-csv-file/" rel="noopener">Combine Audiences From a CSV File</a>).</li>
+</ul>
+
+<h2>Before you start</h2>
+<ol>
+<li><b>Export every audience you will touch</b> (Audience → Export audience). Some actions are permanent, and some data can't be exported at all (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">Use the Combine Audiences Tool</a>; <a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">View or Export Your Contacts</a>).</li>
+<li><b>Measure the duplicates first.</b> If the same email barely overlaps, merging won't move your bill much. Count the overlap by hand, or with AudienceTrim's free audit (browser-only, nothing uploaded).</li>
+<li><b>Skip GDPR-enabled audiences for the built-in tool.</b> Mailchimp recommends you don't combine GDPR-enabled audiences with the tool, because GDPR permissions won't transfer (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>). If GDPR applies, the CSV path lets you keep more control, but check your consent records before importing.</li>
+<li><b>Wait out the 7-day bulk-action lock</b> if you recently used an audience for another bulk action (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>).</li>
+<li><b>Pause signup-triggered automations</b> on the primary audience. The combine tool will trigger a welcome automation for every contact it moves; pause first, combine, then clean up (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>).</li>
+</ol>
+
+<h2>Option A: the Combine Audiences tool</h2>
+<ol>
+<li>Click <b>Audience</b> → <b>Audience drop-down</b> → <b>Manage audiences</b>.</li>
+<li>Next to the audience you want to fold into the primary, open <b>Manage audience</b> → <b>Combine audiences</b>.</li>
+<li>Pick your primary audience, optionally assign a group, read the data notification, type <b>CONFIRM</b>, and combine (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>).</li>
+<li>Repeat for each secondary audience, then update signup forms to the primary and delete the empty ones when you're sure.</li>
+</ol>
+<p><b>What the tool does <i>not</i> transfer:</b> group or tag data, email engagement metrics (opens and clicks), member ratings, opt-in timestamps, signup sources, or GDPR permissions. Only subscribed contacts are moved (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>). The tool is also not available for SMS-enabled audiences (same source).</p>
+
+<h2>Option B: CSV export + import (more control)</h2>
+<p>Use this when you need unsubscribed, non-subscribed or cleaned contacts in the primary, or when you want tags that name the old audience.</p>
+<ol>
+<li><b>Pick a primary audience</b> and create tags that name each audience you'll fold in (<a href="https://mailchimp.com/help/combine-audiences-primary-audience-uses-tags/" rel="noopener">Combine Audiences to a Primary Audience Using Tags</a>).</li>
+<li><b>Export the secondary audience</b>. Mailchimp puts subscribed, unsubscribed, non-subscribed and cleaned contacts in separate CSV files inside the ZIP (<a href="https://mailchimp.com/help/combine-audiences-csv-file/" rel="noopener">source</a>).</li>
+<li><b>Archive the secondary audience's contacts</b> before you import, so you don't leave them counting in both places (<a href="https://mailchimp.com/help/combine-audiences-csv-file/" rel="noopener">source</a>). Steps: <a href="mailchimp-archive-unsubscribed-contacts-bulk.html">archive in bulk</a>.</li>
+<li><b>Import each CSV into the primary</b> (Audience → Add contacts → Import contacts → Upload a file). On the Tag step, apply the tag for that old audience. On the Subscribe step, set the email marketing status to match the file (Subscribed / Unsubscribed / Non-subscribed / Cleaned) (<a href="https://mailchimp.com/help/combine-audiences-csv-file/" rel="noopener">source</a>).</li>
+<li><b>Inside one audience, Mailchimp skips duplicates</b> that are already stored: "When you import email contacts to an existing audience, we won't include any duplicate, bounced, or unsubscribed addresses that are already stored in the audience" (<a href="https://mailchimp.com/help/combine-audiences-csv-file/" rel="noopener">source</a>).</li>
+<li>Delete or leave empty the old audiences only after you've checked the primary and updated every signup form, pop-up and embed (<a href="https://mailchimp.com/help/combine-audiences-csv-file/" rel="noopener">source</a>).</li>
+</ol>
+
+<h2>Timing and your bill</h2>
+<p>Mailchimp bills on the <b>peak</b> contact total during each billing period: "even if your contact total decreases, your bill will reflect the highest number of contacts stored in your account that month" (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>). So:</p>
+<ul>
+<li>Archive secondary-audience contacts <i>before</i> or as part of the merge so they stop counting in two places.</li>
+<li>Expect the lower count to apply from then on, not to erase a peak you already hit this period.</li>
+<li>If you're also changing pricing tiers, wait for a new cycle after the peak is down: <a href="reduce-mailchimp-contact-count-before-downgrade.html">lower your contact count before a tier change</a>.</li>
+</ul>
+
+<h2>See the overlap first</h2>
+<p>AudienceTrim's free audit reads your export ZIPs <b>in your browser</b> (nothing is uploaded) and lists every email that appears in more than one audience, with an archive list per audience so you can remove the extras before (or instead of) a full merge.</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Does Mailchimp charge twice for the same email in two audiences?</b> Yes. Mailchimp treats each audience separately, so the same email in two audiences counts as two contacts toward your limit.</p>
+<p><b>Will combining audiences lower my Mailchimp bill?</b> It can, if you currently have the same people in more than one audience. After they live in one primary audience, Mailchimp no longer counts them twice. Your bill still uses that month's peak, so the savings show from the lower peak onward.</p>
+<p><b>What data does the Combine Audiences tool lose?</b> Group and tag data, opens and clicks, member ratings, opt-in timestamps, signup sources, and GDPR permissions don't transfer. Only subscribed contacts are moved.</p>
+<p><b>Should I use the tool or a CSV import?</b> Use the tool for a quick subscribed-only merge. Use CSV export and import when you need unsubscribed, non-subscribed or cleaned contacts in the primary, or when you want tags that preserve which audience each contact came from.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicate contacts across Mailchimp audiences</a></li>
+<li><a href="mailchimp-cleaned-vs-archived-contacts.html">Cleaned vs archived vs unsubscribed contacts</a></li>
+<li><a href="mailchimp-audience-export-zip-files.html">What's in a Mailchimp audience export ZIP</a></li>
+<li><a href="reduce-mailchimp-contact-count-before-downgrade.html">Lower your contact count before a tier change</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Quotes are from Mailchimp's help center, accessed October 2026. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
