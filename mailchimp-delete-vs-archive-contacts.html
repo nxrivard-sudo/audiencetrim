@@ -1,1 +1,60 @@
-@/workspace/ops/compounder/exp-003/dist/mailchimp-delete-vs-archive-contacts.html
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mailchimp delete vs archive contacts: which one lowers your bill</title>
+<meta name="description" content="Archive to lower future Mailchimp contact billing without losing data. Delete only for GDPR/CCPA requests — it is permanent and usually the wrong tool for cutting your bill.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-delete-vs-archive-contacts.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Mailchimp delete vs archive contacts"><meta property="og:description" content="Archive to cut future billing; delete only for GDPR. Sourced from Mailchimp Help."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-delete-vs-archive-contacts.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does archiving contacts lower my Mailchimp bill?", "acceptedAnswer": {"@type": "Answer", "text": "Archived contacts don't count toward your billing tier, but Mailchimp bills on the peak contact total in the current period, so the save usually shows up in later billing periods."}}, {"@type": "Question", "name": "Should I delete contacts to save money on Mailchimp?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mailchimp recommends archiving to reduce contact count without losing data. Use delete for GDPR/CCPA-style removal requests."}}, {"@type": "Question", "name": "Can I re-import a deleted Mailchimp contact?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mailchimp says you can't add a deleted contact back except if they rejoin through the hosted Mailchimp signup form."}}, {"@type": "Question", "name": "Is archiving enough for a GDPR erase request?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mailchimp says archiving is not a legal substitute for deletion; permanently delete the contact from every audience."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>Mailchimp delete vs archive contacts: which one lowers your bill</h1>
+<p><b>Short answer:</b> to reduce billable contacts, <b>archive</b>. Mailchimp says archived contacts don't count toward your billing tier and keep their data (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">Archive or Unarchive Your Contacts</a>). <b>Delete</b> permanently removes personal information and cannot be undone; Mailchimp recommends delete for GDPR (and similar) requests only (<a href="https://mailchimp.com/help/delete-contacts/" rel="noopener">Delete Contacts</a>).</p>
+
+<h2>Side-by-side</h2>
+<table><thead><tr><th></th><th>Archive</th><th>Delete</th></tr></thead><tbody>
+<tr><td>Counts toward contact limit?</td><td>No</td><td>No</td></tr>
+<tr><td>Data kept?</td><td>Yes (separate archived table; reports keep identifiable info)</td><td>No — personal info erased; reports anonymized</td></tr>
+<tr><td>Reversible?</td><td>Yes — you or the contact can unarchive</td><td>No — cannot re-import; only rejoining via hosted signup form brings them back</td></tr>
+<tr><td>When Mailchimp says to use it</td><td>Duplicates, outdated, inactive contacts</td><td>GDPR/CCPA (and similar) removal requests</td></tr>
+</tbody></table>
+<p class="note">Sources: <a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">Archive or Unarchive Your Contacts</a>; <a href="https://mailchimp.com/help/delete-contacts/" rel="noopener">Delete Contacts</a>; <a href="https://mailchimp.com/help/about-your-contacts/" rel="noopener">About Your Contacts</a>.</p>
+
+<h2>Why delete is the wrong bill-cutting tool</h2>
+<ul>
+<li>Mailchimp's delete guide: "If you need to reduce your contact count but don't want to lose any data, we recommend you archive contacts rather than delete them." (<a href="https://mailchimp.com/help/delete-contacts/" rel="noopener">source</a>)</li>
+<li>Both archive and delete remove a contact from the billable count, but delete destroys recoverability. A mistaken bulk delete cannot be undone.</li>
+<li>Archiving is not a legal substitute for deletion. If an EU contact asks to be removed, Mailchimp says you must permanently delete them from every audience (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>Billing caveat: peak still rules this period</h2>
+<p>Mailchimp calculates the monthly bill from your plan tier <i>and</i> the peak contact total during the billing period. Archiving (or deleting) after you already hit a peak does not lower this month's bill; it can lower future periods (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>). Details: <a href="mailchimp-peak-contact-total-billing.html">peak contact total and additional charges</a>.</p>
+
+<h2>Practical playbook</h2>
+<ol>
+<li><b>Export first</b> (Audience → Export audience). Mailchimp tells you to export before bulk deletes because recovery is impossible (<a href="https://mailchimp.com/help/delete-contacts/" rel="noopener">source</a>).</li>
+<li><b>Archive unsubscribed / inactive / duplicate copies</b> you don't need for ads or transactional mail. Guides: <a href="mailchimp-archive-unsubscribed-contacts-bulk.html">archive unsubscribed in bulk</a>, <a href="mailchimp-archive-inactive-contacts.html">archive inactive contacts</a>, <a href="mailchimp-duplicate-contacts-across-audiences.html">duplicates across audiences</a>.</li>
+<li><b>Delete only</b> when someone asked for erasure under privacy law, or Mailchimp emailed you a GDPR notice (you then have 30 days to delete from every audience and connected integrations) (<a href="https://mailchimp.com/help/delete-contacts/" rel="noopener">source</a>).</li>
+</ol>
+
+<h2>See what you could archive first</h2>
+<p>AudienceTrim's free audit reads audience export ZIPs <b>in your browser</b> (nothing uploaded) and counts unsubscribed, non-subscribed and cross-audience duplicates — the usual archive candidates — without touching Mailchimp.</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Does archiving contacts lower my Mailchimp bill?</b> Archived contacts don't count toward your billing tier, but Mailchimp bills on the peak contact total in the current period, so the save usually shows up in later billing periods.</p>
+<p><b>Should I delete contacts to save money on Mailchimp?</b> No. Mailchimp recommends archiving to reduce contact count without losing data. Use delete for GDPR/CCPA-style removal requests.</p>
+<p><b>Can I re-import a deleted Mailchimp contact?</b> No. Mailchimp says you can't add a deleted contact back except if they rejoin through the hosted Mailchimp signup form.</p>
+<p><b>Is archiving enough for a GDPR erase request?</b> No. Mailchimp says archiving is not a legal substitute for deletion; permanently delete the contact from every audience.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-cleaned-vs-archived-contacts.html">Cleaned vs archived vs unsubscribed contacts</a></li>
+<li><a href="mailchimp-archive-unsubscribed-contacts-bulk.html">Archive unsubscribed contacts in bulk</a></li>
+<li><a href="mailchimp-archive-inactive-contacts.html">Archive inactive subscribed contacts</a></li>
+<li><a href="mailchimp-peak-contact-total-billing.html">Peak contact total and additional charges</a></li>
+<li><a href="reduce-mailchimp-contact-count-before-downgrade.html">Lower contact count before a tier change</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Quotes are from Mailchimp's help center, accessed October 2026. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
