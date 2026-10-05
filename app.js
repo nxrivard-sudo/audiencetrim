@@ -139,5 +139,14 @@
     var saved = null; try { saved = localStorage.getItem('lt_key'); } catch (e) {}
     if (saved) unlock(saved, true);
   });
+
+  function syncAuditFocus() {
+    try {
+      document.documentElement.classList.toggle('audit-focus', location.hash === '#audit');
+    } catch (e) {}
+  }
+  syncAuditFocus();
+  window.addEventListener('hashchange', syncAuditFocus);
+
   window.LT_APP = { addFiles: addFiles, run: run, unlock: unlock, state: state, outputs: outputs, demo: demo };
 })();
