@@ -17,4 +17,4 @@ input[type=text],input[type=number],select{font:inherit;padding:6px 8px;border:1
 .lock{font-size:12px;background:#fff7ed;color:var(--warn);border:1px solid #fed7aa;border-radius:6px;padding:1px 6px;margin-left:6px}
 .price{font-size:36px;font-weight:800}.hidden{display:none}ol li{margin:6px 0}footer{padding:30px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:30px}
 .note{font-size:13px;color:var(--muted)}pre{white-space:pre-wrap;background:#f1f5f9;padding:10px;border-radius:8px;font-size:13px}
-@media(max-width:760px){.grid3,.kpis{grid-template-columns:1fr 1fr}.hero h1{font-size:30px}}
+@media(max-width:760px){.grid3,.kpis{grid-template-columns:1fr 1fr}.hero h1{font-size:30px}.card{overflow-x:auto;-webkit-overflow-scrolling:touch}th,td{white-space:nowrap}}
