@@ -1,1 +1,87 @@
-PLACEHOLDER_TEST_DO_NOT_COMMIT
+<!doctype html>
+<html lang="en"><head><meta name="google-site-verification" content="xVxPTTWSGbOaUyXUKVq50NND9ZrfQLtwSqiSKOMu7yc" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AudienceTrim: stop paying Mailchimp for duplicate and unsubscribed contacts</title>
+<meta name="description" content="Free, private audit of your Mailchimp audience exports. See how many billed contacts are cross-audience duplicates or unsubscribed, then get archive-ready lists. Runs 100% in your browser.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/">
+<meta property="og:type" content="website"><meta property="og:title" content="AudienceTrim: stop paying Mailchimp for contacts you can't email"><meta property="og:description" content="Free, private audit of your Mailchimp audience exports. Runs 100% in your browser."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/">
+<link rel="stylesheet" href="style.css">
+<!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AudienceTrim", "url": "https://nxrivard-sudo.github.io/audiencetrim/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in a web browser)", "description": "Free, private audit of your Mailchimp audience exports. See how many billed contacts are cross-audience duplicates or unsubscribed, then get archive-ready lists. Runs 100% in your browser.", "offers": [{"@type": "Offer", "name": "Free audit", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Solo", "price": "29", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Agency", "price": "79", "priceCurrency": "USD"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is my data uploaded?", "acceptedAnswer": {"@type": "Answer", "text": "No. AudienceTrim is a static page; your files are parsed by JavaScript on your device. There's no server, no account and no Mailchimp login. You can disconnect from the internet after the page loads and it still works."}}, {"@type": "Question", "name": "Does Mailchimp really charge for unsubscribed contacts?", "acceptedAnswer": {"@type": "Answer", "text": "On current plans, yes: subscribed, unsubscribed and non-subscribed contacts count, and archived or cleaned ones don't (Mailchimp Help). Some legacy plans differ; check your Billing page."}}, {"@type": "Question", "name": "How is the saving estimated?", "acceptedAnswer": {"@type": "Answer", "text": "If you enter your current bill, we scale it by the share of billed contacts you can archive. Mailchimp prices in tiers, so the real saving depends on which tier you land in. Confirm on your Mailchimp Billing page."}}, {"@type": "Question", "name": "Will archiving lose data?", "acceptedAnswer": {"@type": "Answer", "text": "Archived contacts keep their data and can be unarchived (Mailchimp Help); see how to archive in bulk. If you use unsubscribed contacts for postcards or ads, keep them: untick \u201carchive unsubscribed\u201d."}}, {"@type": "Question", "name": "How do I get my key?", "acceptedAnswer": {"@type": "Answer", "text": "After checkout you're redirected to a page that shows your key and saves it in this browser. Keep a copy."}}, {"@type": "Question", "name": "Why is my bill still high after archiving?", "acceptedAnswer": {"@type": "Answer", "text": "Mailchimp bills on the peak contact total in the billing period, so a peak already reached this cycle still drives this month's bill (Mailchimp Help)."}}, {"@type": "Question", "name": "Refunds?", "acceptedAnswer": {"@type": "Answer", "text": "If the audit finds nothing to archive, email us within 14 days for a refund."}}]}</script><!--/jsonld-->
+</head><body>
+<script>(function(){try{var q=location.search,ph=/[?&]ref=producthunt(?:&|$)/.test(q);if(ph&&location.hash!=="#audit")location.replace(location.pathname+location.search+"#audit");if(location.hash==="#audit")document.documentElement.classList.add("audit-focus");}catch(e){}})();</script>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="#audit">Free audit</a> \u00b7 <a href="#pricing">Pricing</a> \u00b7 <a href="#faq">FAQ</a></nav></div></header>
+
+<div class="wrap">
+<div class="hero">
+  <div class="pill">For Mailchimp exports \u00b7 files never leave your browser</div>
+  <h1>Stop paying Mailchimp for contacts you can't email.</h1>
+  <p class="lead">Mailchimp bills for <b>unsubscribed</b> and <b>non-subscribed</b> contacts, and counts the same person <b>once per audience</b>. AudienceTrim reads your audience exports and shows how many billed contacts you could archive, plus ready-to-use lists to do it.</p>
+  <p><a class="btn" href="#audit">Run the free audit</a> &nbsp; <a class="btn secondary" href="#how">How it works</a></p>
+  <p class="note">Sources: Mailchimp Help: <a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">pricing plans</a> (unsubscribed and non-subscribed contacts count) and <a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">duplicate contacts</a> (no deduping across audiences).</p>
+</div>
+
+<section id="how"><h2>How it works</h2>
+<div class="grid3">
+  <div class="card"><b>1. Export</b><p>In Mailchimp: Audience \u2192 Export audience, once per audience. You get a ZIP of CSVs (subscribed, unsubscribed, non-subscribed, cleaned).</p></div>
+  <div class="card"><b>2. Drop the ZIPs here</b><p>AudienceTrim reads them <i>in your browser</i>. Nothing is uploaded, no Mailchimp login, no API key.</p></div>
+  <div class="card"><b>3. Archive and save</b><p>See billed contacts before and after. Pro gives per-audience archive lists, a combined one-audience file with tags, and step-by-step Mailchimp instructions.</p></div>
+</div></section>
+
+<section id="audit"><h2>Free audit</h2>
+<div id="drop" tabindex="0"><b>Drop Mailchimp export ZIPs or CSVs here</b><br><span class="muted">or click to choose files. Use one ZIP per audience; loose CSVs are grouped by their export ID.</span>
+<input id="file" type="file" multiple accept=".zip,.csv,text/csv,application/zip" class="hidden"></div>
+<p class="note">No exports handy? <a href="#" id="demo">Load a synthetic demo</a> (fake contacts).</p>
+<div id="files" class="card hidden" style="margin-top:14px">
+  <table><thead><tr><th>File</th><th>Audience</th><th>Status</th><th>Rows</th></tr></thead><tbody id="filesBody"></tbody></table>
+  <p style="margin-top:14px">Primary audience (keeps duplicates): <select id="primary"></select>
+  &nbsp; <label><input type="checkbox" id="optUnsub" checked> archive unsubscribed</label>
+  &nbsp; <label><input type="checkbox" id="optNon"> archive non-subscribed</label>
+  &nbsp; Current monthly bill $ <input type="number" id="bill" min="0" step="1" style="width:90px" placeholder="optional"></p>
+  <button class="btn" id="run">Analyze</button> <button class="btn secondary" id="reset">Clear</button>
+</div>
+<div id="results" class="hidden" style="margin-top:18px">
+  <div class="kpis">
+    <div class="card"><div class="stat">Billed contacts now</div><div class="big" id="kBefore">-</div></div>
+    <div class="card"><div class="stat">After archiving</div><div class="big" id="kAfter">-</div></div>
+    <div class="card"><div class="stat">Can archive</div><div class="big" id="kArch">-</div><div class="stat" id="kPct"></div></div>
+    <div class="card"><div class="stat">Estimated monthly saving</div><div class="big" id="kSave">-</div><div class="stat" id="kSaveNote"></div></div>
+  </div>
+  <div class="card" style="margin-top:12px"><table><tbody id="breakdown"></tbody></table></div>
+  <div class="card" style="margin-top:12px"><b>By audience</b><table><thead><tr><th>Audience</th><th>Subscribed</th><th>Unsubscribed</th><th>Non-subscribed</th><th>Cleaned (not billed)</th><th>Billed</th></tr></thead><tbody id="audBody"></tbody></table></div>
+  <div class="card" style="margin-top:12px"><b>Your files</b> <span id="proState" class="note"></span><table><tbody id="dlBody"></tbody></table>
+    <div id="licBox" style="margin-top:10px">Have a key? <input type="text" id="licKey" placeholder="LT1...." style="width:60%"> <button class="btn secondary" id="licBtn">Unlock</button> <span id="licMsg" class="note"></span></div>
+  </div>
+  <div class="card" style="margin-top:12px"><b>How to archive in Mailchimp</b>
+    <ol>
+      <li><b>Back up first:</b> keep your original export ZIPs. Archiving is reversible (Mailchimp lets you unarchive), but deleting is not. AudienceTrim never deletes anything.</li>
+      <li><b>Unsubscribed or non-subscribed contacts:</b> in each audience, create a segment for <i>Email marketing status is unsubscribed</i> (or non-subscribed), select all, then Actions \u2192 Archive. The archive files list exactly who that affects.</li>
+      <li><b>Cross-audience duplicates:</b> in the audience named in the file, import each <code>archive__\u2026</code> file for that audience with only the Email column mapped, the <i>status shown in the file name</i>, tag <code>audiencetrim-archive</code>, and "Update any existing contacts" ticked. This only tags existing contacts. Then segment by the tag, select all, then Archive.</li>
+      <li><b>Or merge everything into one audience</b> (Mailchimp's recommended setup): import <code>combined_primary_audience.csv</code> into your primary audience with the TAGS column, following Mailchimp's <a href="https://mailchimp.com/help/combine-audiences-primary-audience-uses-tags/" rel="noopener">combine audiences guide</a>.</li>
+      <li>Archived contacts stop counting toward your bill from the next billing period. Mailchimp doesn't lower a peak already reached in the current period (<a href="https://mailchimp.com/help/combine-audiences-primary-audience-uses-tags/" rel="noopener">source</a>).</li>
+    </ol></div>
+  <div id="warns" class="note warn"></div>
+</div>
+</section>
+
+<section id="pricing"><h2>Pricing</h2>
+<div class="grid3">
+  <div class="card"><b>Free audit</b><div class="price">$0</div><p>Full numbers: billed contacts before and after, duplicates, unsubscribed, by audience, plus a 5-row preview of every file.</p></div>
+  <div class="card"><b>Solo</b><div class="price">$29</div><p class="muted">one-time</p><p>Unlock all downloads: archive lists per audience, combined one-audience file with tags, invalid-email list, possible same-person list. Re-run any time.</p><p><a class="btn buy" data-plan="solo" href="#">Get Solo</a></p></div>
+  <div class="card"><b>Agency</b><div class="price">$79</div><p class="muted">one-time, 12 months</p><p>Everything in Solo for unlimited client accounts for 12 months.</p><p><a class="btn buy" data-plan="agency" href="#">Get Agency</a></p></div>
+</div>
+<p class="note" id="billedAs"></p>
+</section>
+
+<section id="faq"><h2>FAQ</h2>
+<p><b>Is my data uploaded?</b> No. AudienceTrim is a static page; your files are parsed by JavaScript on your device. There's no server, no account and no Mailchimp login. You can disconnect from the internet after the page loads and it still works.</p>
+<p><b>Does Mailchimp really charge for unsubscribed contacts?</b> On current plans, yes: subscribed, unsubscribed and non-subscribed contacts count, and archived or cleaned ones don't (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">Mailchimp Help</a>). Some legacy plans differ; check your Billing page.</p>
+<p><b>How is the saving estimated?</b> If you enter your current bill, we scale it by the share of billed contacts you can archive. Mailchimp prices in tiers, so the real saving depends on which tier you land in. Confirm on your Mailchimp Billing page.</p>
+<p><b>Will archiving lose data?</b> Archived contacts keep their data and can be unarchived (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">Mailchimp Help</a>); see <a href="mailchimp-archive-unsubscribed-contacts-bulk.html">how to archive in bulk</a>. If you use unsubscribed contacts for postcards or ads, keep them: untick "archive unsubscribed".</p>
+<p><b>How do I get my key?</b> After checkout you're redirected to a page that shows your key and saves it in this browser. Keep a copy.</p>
+<p><b>Why is my bill still high after archiving?</b> Mailchimp bills on the <a href="mailchimp-peak-contact-total-billing.html">peak contact total</a> in the billing period, so a peak already reached this cycle still drives this month's bill (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">Mailchimp Help</a>).</p>
+<p><b>Refunds?</b> If the audit finds nothing to archive, email us within 14 days for a refund.</p>
+</section>
+</div>
+<footer><div class="wrap">Guides: <a href="mailchimp-unsubscribed-contacts-billing.html">Does Mailchimp charge for unsubscribed contacts?</a> \u00b7 <a href="mailchimp-archive-unsubscribed-contacts-bulk.html">Archive unsubscribed contacts in bulk</a> \u00b7 <a href="mailchimp-non-subscribed-contacts-billing.html">Non-subscribed contacts and your bill</a> \u00b7 <a href="reduce-mailchimp-contact-count-before-downgrade.html">Lower your contact count before a tier change</a> \u00b7 <a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicates across audiences</a> \u00b7 <a href="mailchimp-cleaned-vs-archived-contacts.html">Cleaned vs archived contacts</a> \u00b7 <a href="merge-mailchimp-audiences-without-double-billing.html">Merge audiences without double-billing</a> \u00b7 <a href="mailchimp-audience-export-zip-files.html">Audience export ZIP contents</a> \u00b7 <a href="mailchimp-delete-vs-archive-contacts.html">Delete vs archive contacts</a> \u00b7 <a href="mailchimp-archive-inactive-contacts.html">Archive inactive contacts</a> \u00b7 <a href="mailchimp-peak-contact-total-billing.html">Peak contact total &amp; additional charges</a><br>AudienceTrim is an independent tool, not affiliated with or endorsed by Mailchimp or Intuit. Mailchimp is a trademark of The Rocket Science Group LLC. \u00b7 <a href="privacy.html">Privacy</a> \u00b7 <a href="terms.html">Terms</a> \u00b7 <span id="contact"></span></div></footer>
+<script src="config.js"></script><script src="engine.js"></script><script src="listtrim-core.js"></script><script src="zip.js"></script><script src="license.js"></script><script src="app.js"></script>
+<script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
