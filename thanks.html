@@ -10,4 +10,4 @@ var C=window.LT_CONFIG||{};if(C.supportEmail)document.getElementById('contact').
 if(!k){m.textContent='No key found in this link. Email support with your Stripe receipt and we will send it.';return;}
 var r=await LTLicense.verifyKey(k);if(r.ok&&(C.revoked||[]).indexOf(r.payload.k)<0){try{localStorage.setItem('lt_key',k)}catch(e){}m.textContent='Your '+r.payload.p+' key is active'+(r.payload.e<'2090'?' until '+r.payload.e:'')+'.';document.getElementById('key').textContent=k;}
 else m.textContent='This key could not be verified ('+(r.why||'revoked')+'). Email support with your Stripe receipt.';})();
-</script></body></html>
+</script><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
