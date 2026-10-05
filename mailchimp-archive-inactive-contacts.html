@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to archive inactive Mailchimp contacts to lower your bill</title>
+<meta name="description" content="Mailchimp bills on peak contact total. Segment non-openers or low contact ratings, archive inactive subscribed contacts, and cut future billing — with Mailchimp's own steps.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-archive-inactive-contacts.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Archive inactive Mailchimp contacts"><meta property="og:description" content="Segment non-openers or low ratings and archive inactive contacts to lower future Mailchimp bills."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-archive-inactive-contacts.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will archiving inactive contacts lower my Mailchimp bill this month?", "acceptedAnswer": {"@type": "Answer", "text": "Not if you already hit a higher peak this billing period. Mailchimp bills on peak contact total; archiving helps future periods."}}, {"@type": "Question", "name": "Should I re-engage before archiving inactive subscribers?", "acceptedAnswer": {"@type": "Answer", "text": "Mailchimp recommends trying a re-engagement campaign first, because some inactive contacts can still generate revenue."}}, {"@type": "Question", "name": "How do I avoid archiving brand-new Mailchimp subscribers?", "acceptedAnswer": {"@type": "Answer", "text": "Add a segment condition Email Date Added is before a date prior to your recent sends, so new contacts who haven't received email yet stay subscribed."}}, {"@type": "Question", "name": "Do archived inactive contacts keep their data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Archiving removes them from the marketing audience without losing data, and you can unarchive later."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>How to archive inactive Mailchimp contacts to lower your bill</h1>
+<p>Subscribed contacts who never open still count toward your Mailchimp contact limit. Mailchimp's own advice for avoiding extra charges is to segment contacts who aren't interacting with emails (or buying) and archive them (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>). Their dedicated walkthrough is <a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">Archive Inactive Contacts</a>.</p>
+
+<h2>What to expect on the bill</h2>
+<ul>
+<li>Archived contacts don't count toward your current contact total and can be unarchived later (<a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">source</a>).</li>
+<li>Billing uses the <b>peak</b> contact total in each period, so archiving won't cut a peak already recorded this cycle — it helps later periods (<a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">source</a>; <a href="mailchimp-peak-contact-total-billing.html">peak billing explained</a>).</li>
+<li>Mailchimp suggests trying a re-engagement campaign before you archive, in case some inactive contacts are still worth winning back (<a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>Method 1: segment by email interaction (non-openers)</h2>
+<ol>
+<li>Click <b>Audience</b>, then <b>Segments</b>. Pick the audience if you have more than one.</li>
+<li>Click <b>Create segment</b>.</li>
+<li>First condition: <b>Campaign interaction → has not opened</b>, then choose from <b>Aggregated Emails</b>.</li>
+<li>Click <b>Add filter</b> (keep <b>And</b>). Second condition: <b>Campaign interaction → was sent</b>, same Aggregated Emails list — so you only target people who were sent those emails and didn't open.</li>
+<li>Optional: add <b>Email Date Added → is before → [date]</b> so brand-new subscribers who haven't received mail yet aren't archived (<a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">Mailchimp tip</a>).</li>
+<li>Click <b>Review Segment</b>, select the contacts, click <b>Archive</b>, type <b>ARCHIVE</b>, confirm.</li>
+</ol>
+<p class="note">Source steps: <a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">Archive Inactive Contacts — Segment and archive by email interaction</a>.</p>
+
+<h2>Method 2: segment by contact rating</h2>
+<ol>
+<li>Audience → Segments → Create segment.</li>
+<li>Condition: <b>Contact Rating → is less than → 2 stars</b> (one-star / negative rating). Mailchimp recalculates ratings when you send (<a href="https://mailchimp.com/help/remove-inactive-contacts/" rel="noopener">source</a>).</li>
+<li>Review, select, Archive, type ARCHIVE.</li>
+</ol>
+
+<h2>Also archive the easy billable statuses</h2>
+<p>Inactive <i>subscribed</i> contacts are only one slice. Unsubscribed and (often) non-subscribed contacts still count toward the limit until archived (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>):</p>
+<ul>
+<li><a href="mailchimp-archive-unsubscribed-contacts-bulk.html">Archive unsubscribed contacts in bulk</a></li>
+<li><a href="mailchimp-non-subscribed-contacts-billing.html">Non-subscribed contacts and your bill</a></li>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicates across audiences</a> (same email billed once per audience)</li>
+</ul>
+
+<h2>Measure before you archive</h2>
+<p>Export each audience, then run <a href="./#audit">AudienceTrim's free audit</a> in your browser. It counts unsubscribed, non-subscribed and cross-audience duplicates (nothing is uploaded). Use Mailchimp segments above for inactive <i>subscribed</i> openers — those engagement fields aren't in the static export ZIP the same way.</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Will archiving inactive contacts lower my Mailchimp bill this month?</b> Not if you already hit a higher peak this billing period. Mailchimp bills on peak contact total; archiving helps future periods.</p>
+<p><b>Should I re-engage before archiving inactive subscribers?</b> Mailchimp recommends trying a re-engagement campaign first, because some inactive contacts can still generate revenue.</p>
+<p><b>How do I avoid archiving brand-new Mailchimp subscribers?</b> Add a segment condition Email Date Added is before a date prior to your recent sends, so new contacts who haven't received email yet stay subscribed.</p>
+<p><b>Do archived inactive contacts keep their data?</b> Yes. Archiving removes them from the marketing audience without losing data, and you can unarchive later.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-delete-vs-archive-contacts.html">Delete vs archive contacts</a></li>
+<li><a href="mailchimp-peak-contact-total-billing.html">Peak contact total and additional charges</a></li>
+<li><a href="reduce-mailchimp-contact-count-before-downgrade.html">Lower contact count before a tier change</a></li>
+<li><a href="mailchimp-cleaned-vs-archived-contacts.html">Cleaned vs archived vs unsubscribed</a></li>
+<li><a href="mailchimp-archive-unsubscribed-contacts-bulk.html">Archive unsubscribed in bulk</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Steps and quotes are from Mailchimp's help center, accessed October 2026. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
