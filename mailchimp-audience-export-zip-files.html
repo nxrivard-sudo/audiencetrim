@@ -1,1 +1,79 @@
-loading
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What's in a Mailchimp audience export ZIP (and which CSV is which)</title>
+<meta name="description" content="A Mailchimp audience export is a ZIP of CSV files, one per contact status. What each file contains, which columns matter for billing audits, and how to drop the ZIP into a free audit without uploading.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-audience-export-zip-files.html">
+<meta property="og:type" content="article"><meta property="og:title" content="What's in a Mailchimp audience export ZIP"><meta property="og:description" content="Which CSV files Mailchimp puts in an audience export, what the columns mean, and how to use them for a billing audit."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-audience-export-zip-files.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does my Mailchimp export come as a ZIP of several CSVs?", "acceptedAnswer": {"@type": "Answer", "text": "Mailchimp separates contact types into different files. One ZIP can contain subscribed, unsubscribed, non-subscribed and cleaned CSVs, with the type in each file name."}}, {"@type": "Question", "name": "Which export file has my unsubscribed contacts?", "acceptedAnswer": {"@type": "Answer", "text": "The CSV whose file name includes “unsubscribed”. Open that file (or drop the whole ZIP into AudienceTrim) when you want to see who still counts toward your bill after opting out."}}, {"@type": "Question", "name": "Do cleaned contacts appear in the export?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in their own CSV. They don't count toward your contact limit, so a billing audit shows them separately from billable contacts."}}, {"@type": "Question", "name": "How long does Mailchimp keep an export?", "acceptedAnswer": {"@type": "Answer", "text": "Contact exports and their CSVs stay available in your account for 30 days. Re-download them from Audience → More options → Export history."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>What's in a Mailchimp audience export ZIP (and which CSV is which)</h1>
+<p><b>Short answer:</b> when you export an audience, Mailchimp often gives you a ZIP that "contains separate CSV files for each type of email contact (subscribed, unsubscribed, non-subscribed, and cleaned)" (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">View or Export Your Contacts</a>). The file name of each CSV tells you the contact type. Those files are what a billing audit reads.</p>
+
+<h2>How to export an audience</h2>
+<ol>
+<li>Click <b>Audience</b>. If you have more than one, pick the audience from the drop-down.</li>
+<li>Click <b>Export audience</b>.</li>
+<li>In the pop-up, click <b>Export CSV</b>. Mailchimp emails you when it's ready (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+<li>Download the file. Exports stay available in your account for 30 days; reopen them under Audience → More options → Export history (same source).</li>
+</ol>
+<p>You can also export a saved segment, a tag (after saving it as a segment), or a group the same way. Owners and Admins are the user levels that can export full audiences (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</p>
+<p>Repeat once per audience if you're auditing the whole account. Mailchimp can't see duplicates across audiences, so one export isn't enough when you have several (<a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">About Duplicate Contacts</a>).</p>
+
+<h2>What's inside the ZIP</h2>
+<p>Open the ZIP. You'll typically see one CSV per contact type. Mailchimp says the contact type "appears in the file name of the exported file" (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>). Common names look like:</p>
+<table><thead><tr><th>File name pattern</th><th>Contact type</th><th>Counts toward contact limit?</th></tr></thead><tbody>
+<tr><td>…subscribed… (and not "unsubscribed" / "non-subscribed")</td><td>Subscribed</td><td>Yes</td></tr>
+<tr><td>…unsubscribed…</td><td>Unsubscribed</td><td>Yes</td></tr>
+<tr><td>…nonsubscribed… / …non-subscribed…</td><td>Non-subscribed</td><td>Yes</td></tr>
+<tr><td>…cleaned…</td><td>Cleaned</td><td>No</td></tr>
+</tbody></table>
+<p class="note">Billing rules: <a href="https://mailchimp.com/help/about-your-contacts/" rel="noopener">About Your Contacts</a>. An export of only one type (for example archived contacts) may be a single CSV, not a ZIP (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>). Archived contacts are exported separately from active contacts (same source).</p>
+<p>If you also have SMS contacts, Mailchimp includes a separate SMS folder with SMS-specific columns such as SMS Phone Number, Program Name and SMS Subscription Status (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</p>
+
+<h2>Columns that matter for a billing audit</h2>
+<p>Every export includes your audience fields plus contact data Mailchimp collects. Useful columns for counting and deduping (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">What's included</a>):</p>
+<ul>
+<li><b>Email Address</b> — the key used to spot the same person across audiences.</li>
+<li><b>EUID</b> — "the unique identifier for a contact on the account level, across all audiences."</li>
+<li><b>LEID</b> — "the unique identifier for a contact, specific to an audience."</li>
+<li><b>MEMBER_RATING</b> — activity rating; useful when you keep one copy of a duplicate and archive the others.</li>
+<li><b>TAGS</b>, <b>NOTES</b>, audience merge fields — context you may want to keep before archiving.</li>
+<li><b>OPTIN_TIME / CONFIRM_TIME / LAST_CHANGED</b> — timestamps. IP and location columns (OPTIN_IP, CONFIRM_IP, LATITUDE, LONGITUDE, TIMEZONE, CC, REGION) are included too, so treat the file as personal data.</li>
+</ul>
+<p>What an audience export does <b>not</b> include: email engagement metrics (opens and clicks), purchase history, predicted demographics, favorite email client, social profile data, and a complete record of profile updates (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">What's not included</a>). For GDPR personal-data requests, Mailchimp says to export from the contact's profile instead of using the bulk process (same source).</p>
+
+<h2>Unsubscribed and cleaned CSVs: extra columns</h2>
+<p>The unsubscribed and cleaned files carry the same audience fields as the subscribed file. In real exports they usually add a few status-specific columns, such as <code>UNSUB_TIME</code>, <code>UNSUB_CAMPAIGN_TITLE</code> and <code>UNSUB_REASON</code> in the unsubscribed file (a user quotes <code>UNSUB_CAMPAIGN_TITLE</code> from their export in this <a href="https://community.zapier.com/how-do-i-3/mailchimp-unsubscribes-possible-to-show-which-campaign-451" rel="noopener">Zapier Community thread</a>) and <code>CLEAN_TIME</code> in the cleaned file. Mailchimp's help article doesn't list these columns, so treat the exact set as something to check in your own file. The file name is Mailchimp's documented way to tell the types apart.</p>
+<p>The unsubscribed file is the one you want when you plan to archive people who still count toward your bill: <a href="mailchimp-unsubscribed-contacts-billing.html">Does Mailchimp charge for unsubscribed contacts?</a></p>
+
+<h2>Opening the CSVs without garbled characters</h2>
+<p>If special characters look wrong in Excel, Mailchimp suggests renaming <code>.csv</code> to <code>.txt</code> and opening with UTF-8 encoding, or pasting from a UTF-8 text editor into Excel and using Text-to-Columns (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>). Google Sheets and LibreOffice Calc usually open UTF-8 CSVs cleanly.</p>
+
+<h2>Drop the ZIPs into a free audit</h2>
+<p>AudienceTrim reads Mailchimp export ZIPs and loose CSVs <b>in your browser</b>. Nothing is uploaded, no Mailchimp login, no API key. It groups loose CSVs by the <code>members_export_<hash></code> id in the file name, detects each file's status from its name (or, failing that, from columns like <code>UNSUB_TIME</code> or <code>CLEAN_TIME</code>), counts any file it can't classify as billable with a warning, and reports:</p>
+<ul>
+<li>billable contacts (subscribed + unsubscribed + non-subscribed) per audience;</li>
+<li>cleaned contacts (shown, not billed);</li>
+<li>the same email across audiences;</li>
+<li>downloadable archive lists you can use in Mailchimp.</li>
+</ul>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Why does my Mailchimp export come as a ZIP of several CSVs?</b> Mailchimp separates contact types into different files. One ZIP can contain subscribed, unsubscribed, non-subscribed and cleaned CSVs, with the type in each file name.</p>
+<p><b>Which export file has my unsubscribed contacts?</b> The CSV whose file name includes "unsubscribed". Open that file (or drop the whole ZIP into AudienceTrim) when you want to see who still counts toward your bill after opting out.</p>
+<p><b>Do cleaned contacts appear in the export?</b> Yes, in their own CSV. They don't count toward your contact limit, so a billing audit shows them separately from billable contacts.</p>
+<p><b>How long does Mailchimp keep an export?</b> Contact exports and their CSVs stay available in your account for 30 days. Re-download them from Audience → More options → Export history.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-cleaned-vs-archived-contacts.html">Cleaned vs archived vs unsubscribed contacts</a></li>
+<li><a href="merge-mailchimp-audiences-without-double-billing.html">Merge audiences without paying twice</a></li>
+<li><a href="mailchimp-archive-unsubscribed-contacts-bulk.html">Archive unsubscribed contacts in bulk</a></li>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicate contacts across audiences</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Quotes are from Mailchimp's help center, accessed October 2026. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
