@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to export a Mailchimp audience (and audit it for billable contacts)</title>
+<meta name="description" content="Step-by-step Mailchimp audience export from Mailchimp's own help docs, what the export ZIP includes and leaves out, and how to audit it for contacts that count toward your bill.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/how-to-export-mailchimp-audience.html">
+<meta property="og:type" content="article"><meta property="og:title" content="How to export a Mailchimp audience"><meta property="og:description" content="Export your Mailchimp audience, open the ZIP, and audit it for billable contacts."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/how-to-export-mailchimp-audience.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who can export a Mailchimp audience?", "acceptedAnswer": {"@type": "Answer", "text": "Only Owners and Admins can export audiences, according to Mailchimp's help center."}}, {"@type": "Question", "name": "Does a Mailchimp audience export include archived contacts?", "acceptedAnswer": {"@type": "Answer", "text": "No. Archived contacts are exported separately from active contacts, from the View archived contacts page."}}, {"@type": "Question", "name": "Does a Mailchimp contact export include opens and clicks?", "acceptedAnswer": {"@type": "Answer", "text": "No. Contact exports don't include email engagement metrics like opens and clicks. Export an email report for that data."}}, {"@type": "Question", "name": "How long can I download a past Mailchimp export?", "acceptedAnswer": {"@type": "Answer", "text": "Contact exports and their CSVs are available in your account for 30 days, under More options then Export history."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>How to export a Mailchimp audience (and audit it for billable contacts)</h1>
+<p class="guide-cta-top"><a class="btn" href="./#audit">Run the free audit</a> <span class="muted">— browser-only, nothing uploaded</span></p>
+<p>Exporting your audience is the first step to finding out which contacts you're paying for. Mailchimp lets you export an entire audience, a segment, a tag, or a group, and exports can include subscribed, non-subscribed, unsubscribed, and cleaned contacts (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">View or Export Your Contacts</a>).</p>
+
+<h2>Before you export</h2>
+<ul>
+<li>Only Owners and Admins can export audiences (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+<li>Contact exports don't include email report data like open and click rates — export an email report for that (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+<li>Exports and their CSVs stay available in your account for 30 days (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+<li>If a contact asks for their personal data under GDPR, Mailchimp says to export from that contact's profile instead (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>Export an entire audience</h2>
+<ol>
+<li>Click <b>Audience</b>.</li>
+<li>If you have more than 1 audience, click the <b>Audience</b> drop-down and choose the one you want.</li>
+<li>Click <b>Export audience</b>.</li>
+<li>In the <b>Export all contacts?</b> pop-up, click <b>Export CSV</b>. Mailchimp emails you when the export is complete.</li>
+</ol>
+<p class="note">Source steps: <a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">View or Export Your Contacts — View or export an audience</a>. Repeat for each audience: the same email in two audiences is a separate contact in each.</p>
+
+<h2>Open the export</h2>
+<ul>
+<li>The export may be a ZIP with a separate CSV per contact type (subscribed, unsubscribed, non-subscribed, cleaned); the contact type appears in each file name (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>; <a href="mailchimp-audience-export-zip-files.html">ZIP contents explained</a>).</li>
+<li>Archived contacts are exported separately, from <b>Manage audience → View archived contacts</b> (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>; <a href="https://mailchimp.com/help/about-your-contacts/" rel="noopener">About Your Contacts</a>).</li>
+<li>Included columns cover your audience fields plus fields such as MEMBER_RATING, LAST_CHANGED, LEID, EUID and TAGS. Not included: signup source, opens and clicks, purchase history, and language (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+<li>To re-download, go to <b>Audience → More options → Export history</b> within 30 days (<a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>Audit the export for billable contacts</h2>
+<p>Subscribed, unsubscribed, and non-subscribed contacts count toward your contact total; archived, cleaned, and deleted contacts don't (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>). So the unsubscribed and non-subscribed CSVs in your export are where the easy savings usually sit.</p>
+<p>Export each audience, then run <a href="./#audit">AudienceTrim's free audit</a> in your browser. It counts unsubscribed, non-subscribed and cross-audience duplicates (nothing is uploaded).</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Who can export a Mailchimp audience?</b> Only Owners and Admins can export audiences, according to Mailchimp's help center.</p>
+<p><b>Does a Mailchimp audience export include archived contacts?</b> No. Archived contacts are exported separately from active contacts, from the View archived contacts page.</p>
+<p><b>Does a Mailchimp contact export include opens and clicks?</b> No. Contact exports don't include email engagement metrics like opens and clicks. Export an email report for that data.</p>
+<p><b>How long can I download a past Mailchimp export?</b> Contact exports and their CSVs are available in your account for 30 days, under More options then Export history.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-audience-export-zip-files.html">Audience export ZIP contents</a></li>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicates across audiences</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Steps and quotes are from Mailchimp's help center, accessed October 2026. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
