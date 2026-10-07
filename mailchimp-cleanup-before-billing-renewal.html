@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mailchimp audience cleanup before your next billing date</title>
+<meta name="description" content="How to clean up a Mailchimp audience before the next billing date: what still counts toward your contact total, why the peak contact total matters, and which contacts to archive first. Facts from Mailchimp Help.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-cleanup-before-billing-renewal.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Mailchimp audience cleanup before your next billing date"><meta property="og:description" content="Archive contacts that still count toward your plan before the next billing date — and why a late cleanup often leaves this month's bill unchanged."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-cleanup-before-billing-renewal.html">
+<link rel="stylesheet" href="style.css"><!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will cleaning up my Mailchimp audience lower this month's bill?", "acceptedAnswer": {"@type": "Answer", "text": "Often not. Mailchimp calculates the monthly bill from your plan and the peak contact total during the billing period, so the highest count stored that month still sets the bill even if you archive later."}}, {"@type": "Question", "name": "Which Mailchimp contacts should I archive before the next billing date?", "acceptedAnswer": {"@type": "Answer", "text": "Contacts that still count toward your contact total: unsubscribed and non-subscribed contacts, duplicates across audiences, and inactive subscribed contacts you no longer email. Archived, cleaned and deleted contacts already don't count."}}, {"@type": "Question", "name": "Where do I see my Mailchimp billing date?", "acceptedAnswer": {"@type": "Answer", "text": "The Account Overview page shows how close you are to your contact limits and your monthly billing date."}}, {"@type": "Question", "name": "Do cleaned (bounced) Mailchimp contacts lower the bill if I archive them?", "acceptedAnswer": {"@type": "Answer", "text": "No. Cleaned contacts already don't count toward audience limits, and Mailchimp says archiving cleaned contacts will not reduce your contact count for billing."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>Mailchimp audience cleanup before your next billing date</h1>
+<p class="guide-cta-top"><a class="btn" href="./#audit">Run the free audit</a> <span class="muted">— browser-only, nothing uploaded</span></p>
+<p>If your Mailchimp contact total sits near a tier limit, a cleanup before the next billing date can keep the <em>next</em> cycle from picking up add-on charges. It often does <em>not</em> change the bill for the cycle you're already in, because Mailchimp prices the month on the peak contact total during that billing period (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>).</p>
+
+<h2>What still counts (and what doesn't)</h2>
+<p>On current plans, subscribed, unsubscribed and non-subscribed contacts all count toward your contact total; archived, cleaned and deleted contacts don't (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>). The Account Overview page shows how close you are to your contact limits and your monthly billing date (<a href="https://mailchimp.com/help/mailchimp-pricing-tiers/" rel="noopener">About Mailchimp Pricing Tiers</a>).</p>
+<ul>
+<li><b>Unsubscribed contacts</b> can't get marketing email but still count (<a href="https://mailchimp.com/help/about-your-contacts/" rel="noopener">About Your Contacts</a>). See <a href="mailchimp-unsubscribed-contacts-billing.html">unsubscribed contacts and billing</a>.</li>
+<li><b>Non-subscribed contacts</b> also count (<a href="https://mailchimp.com/help/about-non-subscribed-contacts/" rel="noopener">About Non-Subscribed Contacts</a>). See <a href="mailchimp-non-subscribed-contacts-billing.html">non-subscribed contacts and your bill</a>.</li>
+<li><b>The same email in two audiences</b> counts twice (<a href="https://mailchimp.com/help/remove-duplicates-and-bounces-with-excel/" rel="noopener">About Duplicate Contacts</a>). See <a href="mailchimp-duplicate-contacts-across-audiences.html">duplicates across audiences</a>.</li>
+<li><b>Cleaned contacts</b> (hard bounces and repeated soft bounces) already don't count toward audience limits. Archiving them "will not reduce your contact count for billing" (<a href="https://mailchimp.com/help/about-cleaned-contacts/" rel="noopener">About Cleaned Contacts</a>) — useful for hygiene, not for this month's price.</li>
+</ul>
+
+<h2>Why timing matters</h2>
+<p>Mailchimp calculates your monthly bill from your feature plan and pricing tier, plus the peak contact total during your billing period. Even if the contact total drops later, the bill reflects the highest number stored that month (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">source</a>). Going over your contact or send limit doesn't stop service; you see an additional charge instead (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">source</a>). More detail: <a href="mailchimp-peak-contact-total-billing.html">peak contact total &amp; additional charges</a>.</p>
+<p class="note">Practical read: finish the cleanup early enough that the lower total sticks for a full billing cycle if you want the next bill to reflect it (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a> also notes keeping a lower total for a full cycle to avoid future additional charges).</p>
+
+<h2>A cleanup order that matches the bill</h2>
+<ol>
+<li><b>Export each audience</b> (Owners and Admins only; <a href="https://mailchimp.com/help/view-export-contacts/" rel="noopener">View or Export Your Contacts</a>) so you have a before snapshot.</li>
+<li><b>Archive unsubscribed contacts</b> you don't need in the active table. Archived contacts don't count toward your billing tier and keep their data (<a href="https://mailchimp.com/help/archive-unarchive-contacts/" rel="noopener">Archive or Unarchive Your Contacts</a>). Steps: <a href="mailchimp-archive-unsubscribed-contacts-bulk.html">archive unsubscribed in bulk</a>.</li>
+<li><b>Review non-subscribed contacts</b> from stores and imports; archive ones you won't market to.</li>
+<li><b>Segment inactive subscribed contacts</b> who aren't interacting, then archive them — Mailchimp suggests this to reduce billable contacts (<a href="https://mailchimp.com/help/about-additional-charges/" rel="noopener">About Additional Charges</a>). How-to: <a href="mailchimp-archive-inactive-contacts.html">archive inactive contacts</a>.</li>
+<li><b>Check for cross-audience duplicates</b> before merging or re-importing.</li>
+<li><b>Leave cleaned contacts alone for billing.</b> They already don't count; archiving them won't lower the contact count for billing (<a href="https://mailchimp.com/help/about-cleaned-contacts/" rel="noopener">source</a>). See <a href="mailchimp-cleaned-vs-archived-contacts.html">cleaned vs archived</a>.</li>
+</ol>
+
+<h2>Find the contacts that still count</h2>
+<p>Drop each audience export ZIP into <a href="./#audit">AudienceTrim's free audit</a>. It counts unsubscribed, non-subscribed and cross-audience duplicates in your browser. Nothing is uploaded.</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>Will cleaning up my Mailchimp audience lower this month's bill?</b> Often not. Mailchimp calculates the monthly bill from your plan and the peak contact total during the billing period, so the highest count stored that month still sets the bill even if you archive later.</p>
+<p><b>Which Mailchimp contacts should I archive before the next billing date?</b> Contacts that still count toward your contact total: unsubscribed and non-subscribed contacts, duplicates across audiences, and inactive subscribed contacts you no longer email. Archived, cleaned and deleted contacts already don't count.</p>
+<p><b>Where do I see my Mailchimp billing date?</b> The Account Overview page shows how close you are to your contact limits and your monthly billing date.</p>
+<p><b>Do cleaned (bounced) Mailchimp contacts lower the bill if I archive them?</b> No. Cleaned contacts already don't count toward audience limits, and Mailchimp says archiving cleaned contacts will not reduce your contact count for billing.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="mailchimp-peak-contact-total-billing.html">Peak contact total &amp; additional charges</a></li>
+<li><a href="mailchimp-paying-for-unengaged-contacts.html">Paying for unengaged Mailchimp contacts</a></li>
+<li><a href="reduce-mailchimp-contact-count-before-downgrade.html">Lower your contact count before a tier change</a></li>
+<li><a href="mailchimp-archive-inactive-contacts.html">Archive inactive contacts</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Steps and facts are from Mailchimp's help center, accessed October 2026; check your own Billing page, since plans differ. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
