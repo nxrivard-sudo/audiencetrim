@@ -65,7 +65,8 @@
     $('audBody').innerHTML = r.audiences.map(function (a) { var c = a.counts; return '<tr><td>' + esc(a.name) + (a.name === r.primary ? ' <span class="note">(primary)</span>' : '') + '</td><td>' + fmt(c.subscribed) + '</td><td>' + fmt(c.unsubscribed) + '</td><td>' + fmt(c.nonsubscribed) + '</td><td>' + fmt(c.cleaned) + '</td><td><b>' + fmt(a.billable) + '</b></td></tr>'; }).join('');
     $('warns').innerHTML = r.warnings.map(esc).join('<br>');
     renderDownloads();
-    if (window.LT_TRACK) window.LT_TRACK('scan', t.billableBefore);
+    var isDemo = state.files.length > 0 && state.files.every(function (f) { return f.name.indexOf('demo › ') === 0; });
+    if (window.LT_TRACK) window.LT_TRACK(isDemo ? 'demo-scan' : 'scan', t.billableBefore);
   }
   function outputs() {
     var r = state.result; if (!r) return [];
