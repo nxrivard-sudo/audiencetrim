@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mailchimp audience limit by plan: how many audiences you get (and what to do at the limit)</title>
+<meta name="description" content="How many audiences each Mailchimp plan allows (Free 1, Essentials 3, Standard 5, Premium unlimited), what happens when you downgrade with too many, and how to consolidate without paying twice for the same contacts. From Mailchimp's own help docs.">
+<link rel="canonical" href="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-audience-limit-by-plan.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Mailchimp audience limit by plan"><meta property="og:description" content="Free 1, Essentials 3, Standard 5, Premium unlimited, and how to consolidate audiences without double billing."><meta property="og:url" content="https://nxrivard-sudo.github.io/audiencetrim/mailchimp-audience-limit-by-plan.html">
+<link rel="stylesheet" href="style.css">
+<!--jsonld--><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many audiences can I have on Mailchimp Essentials?", "acceptedAnswer": {"@type": "Answer", "text": "3. Standard includes 5, Premium is unlimited, and the Free plan includes 1."}}, {"@type": "Question", "name": "Does Mailchimp charge per audience?", "acceptedAnswer": {"@type": "Answer", "text": "No. Billing is based on the total number of contacts across all audiences, so the same email in two audiences is counted twice."}}, {"@type": "Question", "name": "What happens if I downgrade with too many audiences?", "acceptedAnswer": {"@type": "Answer", "text": "Mailchimp lists the changes to make before the downgrade. If conflicts remain after it takes effect, sending is paused until they're fixed."}}, {"@type": "Question", "name": "Should I use more audiences or one audience?", "acceptedAnswer": {"@type": "Answer", "text": "Mailchimp recommends one primary audience organized with tags, groups or segments."}}]}</script><!--/jsonld-->
+</head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="./">Audience<span>Trim</span></a><nav><a href="./#audit">Free audit</a></nav></div></header>
+<div class="wrap"><section>
+<h1>Mailchimp audience limit by plan: how many audiences you get (and what to do at the limit)</h1>
+<p class="guide-cta-top"><a class="btn" href="./#audit">Run the free audit</a> <span class="muted">— browser-only, nothing uploaded</span></p>
+<p><b>Short answer:</b> Free includes 1 audience, Essentials 3, Standard 5 and Premium unlimited audiences (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>). If you're bumping into the limit, Mailchimp's own advice is to use fewer audiences, not more: "It's best to have one audience that you organize with tags, groups, or segments" (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">Requirements and Best Practices for Audiences</a>).</p>
+
+<h2>Audiences included on each plan</h2>
+<table><thead><tr><th>Plan</th><th>Audiences</th><th>Seats</th></tr></thead><tbody>
+<tr><td>Free</td><td>1</td><td>1 (Owner)</td></tr>
+<tr><td>Essentials</td><td>3</td><td>3</td></tr>
+<tr><td>Standard</td><td>5</td><td>5</td></tr>
+<tr><td>Premium</td><td>Unlimited</td><td>Unlimited</td></tr>
+</tbody></table>
+<p class="note">Source: <a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">About Mailchimp Pricing Plans</a>. Pay As You Go "comes with the same set of features as our Essentials plan" (same source). Accounts that were paid before May 15, 2019 may be on a legacy plan with different rules; check your own Billing page.</p>
+
+<h2>Why extra audiences can cost you money</h2>
+<ul>
+<li>"Mailchimp treats each audience in your account separately, and billing is based on the total number of contacts across all your audiences (except with archived and cleaned contacts)" (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">source</a>).</li>
+<li>So the same email address in two audiences counts as two contacts. Mailchimp: "If you have duplicate contacts across audiences, having 1 audience could save you money" (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">source</a>). More on this: <a href="mailchimp-duplicate-contacts-across-audiences.html">duplicates across audiences</a>.</li>
+<li>Subscribed, unsubscribed and non-subscribed contacts all count toward your contact total, in every audience (<a href="https://mailchimp.com/help/about-mailchimp-pricing-plans/" rel="noopener">source</a>).</li>
+</ul>
+
+<h2>Downgrading with more audiences than the new plan allows</h2>
+<ul>
+<li>When you downgrade, Mailchimp shows which features you will and won't keep and "any changes you need to make in your account before you downgrade. Changes could include deleting contacts, seats, or audiences" (<a href="https://mailchimp.com/help/change-or-pause-your-pricing-plan/" rel="noopener">Change or Pause Your Marketing Plan</a>).</li>
+<li>The downgrade takes effect at the beginning of the next billing cycle. "If your account still has conflicts after the downgrade is complete, sending will be paused until the changes are made" (<a href="https://mailchimp.com/help/change-or-pause-your-pricing-plan/" rel="noopener">source</a>).</li>
+<li>So consolidate first, then downgrade. Steps for the plan change itself: <a href="how-to-downgrade-or-pause-mailchimp-plan.html">downgrade or pause a Mailchimp plan</a>.</li>
+</ul>
+
+<h2>How to get under the audience limit</h2>
+<ol>
+<li><b>Export every audience first.</b> Audience actions are permanent, and some data can't be exported (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">Use the Combine Audiences Tool</a>). Steps: <a href="how-to-export-mailchimp-audience.html">export a Mailchimp audience</a>.</li>
+<li><b>See how much overlap there is.</b> Count the emails that appear in more than one audience, plus the unsubscribed and non-subscribed contacts you'd stop paying for if you archived them.</li>
+<li><b>Pick one primary audience</b> and fold the others in, either with the Combine Audiences tool or by CSV export and import. The tool moves only subscribed contacts and doesn't transfer tags, groups, engagement metrics, member ratings, opt-in timestamps, signup sources or GDPR permissions (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>). Full walkthrough: <a href="merge-mailchimp-audiences-without-double-billing.html">merge audiences without double billing</a>.</li>
+<li><b>Use tags, groups or segments</b> for what the separate audiences used to do (<a href="https://mailchimp.com/help/requirements-best-practices-audiences/" rel="noopener">source</a>). See <a href="mailchimp-tags-vs-groups-vs-segments.html">tags vs groups vs segments</a>.</li>
+<li><b>Update signup forms</b> to point at the primary audience, then delete the old audiences when you're sure (<a href="https://mailchimp.com/help/use-combine-audiences-tool/" rel="noopener">source</a>).</li>
+</ol>
+<p>Export each audience and run <a href="./#audit">AudienceTrim's free audit</a>: it lists the same email across audiences and counts unsubscribed and non-subscribed contacts, in your browser, so you can see how much a merge would save before you start. Nothing is uploaded.</p>
+<p><a class="btn" href="./#audit">Run the free audit</a></p>
+
+<h2>FAQ</h2>
+<div id="guide-faq">
+<p><b>How many audiences can I have on Mailchimp Essentials?</b> 3. Standard includes 5, Premium is unlimited, and the Free plan includes 1.</p>
+<p><b>Does Mailchimp charge per audience?</b> No. Billing is based on the total number of contacts across all audiences, so the same email in two audiences is counted twice.</p>
+<p><b>What happens if I downgrade with too many audiences?</b> Mailchimp lists the changes to make before the downgrade. If conflicts remain after it takes effect, sending is paused until they're fixed.</p>
+<p><b>Should I use more audiences or one audience?</b> Mailchimp recommends one primary audience organized with tags, groups or segments.</p>
+</div>
+
+<h2>Related guides</h2>
+<ul>
+<li><a href="merge-mailchimp-audiences-without-double-billing.html">Merge audiences without double billing</a></li>
+<li><a href="mailchimp-duplicate-contacts-across-audiences.html">Duplicates across audiences</a></li>
+<li><a href="how-to-downgrade-or-pause-mailchimp-plan.html">Downgrade or pause a Mailchimp plan</a></li>
+<li><a href="mailchimp-free-plan-contact-limit.html">Free plan contact limit</a></li>
+</ul>
+<p class="note">AudienceTrim isn't affiliated with Mailchimp or Intuit. Steps and facts are from Mailchimp's help center, accessed October 2026; check your own Billing page, since plans differ. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+</section></div><script>window.LT_TRACK=function(e,n){if(!window.goatcounter||!goatcounter.count)return;var b=!n?'':n<5000?'-lt5k':n<15000?'-5k-15k':n<50000?'-15k-50k':'-50k+';goatcounter.count({path:e+b,title:e,event:true});};</script><script data-goatcounter="https://audiencetrim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
